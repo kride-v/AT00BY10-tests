@@ -11,29 +11,29 @@ jobs:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true  # Pakottaa Node 24 käytön
 
     steps:
-      # 1️ Checkout repository
+      # 1️⃣ Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v5  # kloonaa repo runnerille
 
-      # 2️ Asenna Node.js
+      # 2️⃣ Asenna Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '24'
 
-      # 3️ Tyhjennä mahdollinen npm cache
+      # 3️⃣ Tyhjennä mahdollinen npm cache
       - name: Clear npm cache
         run: npm cache clean --force
 
-      # 4️ Asenna npm-paketit
+      # 4️⃣ Asenna npm-paketit
       - name: Install dependencies
         run: npm install
 
-      # 5️ Aja Jest-testit ja luo coverage-raportti
+      # 5️⃣ Aja Jest-testit ja luo coverage-raportti
       - name: Run tests with coverage
         run: npm test -- --coverage
 
-      # 6️ Lähetä raportti Coverallsille
+      # 6️⃣ Lähetä raportti Coverallsille
       - name: Upload coverage to Coveralls
         uses: coverallsapp/github-action@v2
         with:
