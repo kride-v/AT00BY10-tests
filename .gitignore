@@ -1,0 +1,24 @@
+# Node modules
+node_modules/
+
+# Coverage reports
+coverage/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+# Build outputs
+dist/
+build/
+
+# Package lock (voi olla mukana, mutta yleensä OK pitää)
+# package-lock.json
